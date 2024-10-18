@@ -8,6 +8,8 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 #Copia los archivos de tu proyecto en el contenedor
 COPY . .
+#Creo que esta demás
+COPY .env ./ 
 #EXPOSE PUERTO -> inciar mi puerto despues
 #ejecuta tu archivo Python 
 CMD [ "python", "app.py" ]
